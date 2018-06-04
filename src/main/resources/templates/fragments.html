@@ -30,7 +30,7 @@
     <div th:fragment="list-results">
         <table class="job-listing" th:each="job : ${jobs}">
             <tr th:each="field : ${job}">
-                <td th:each="data : ${field}" th:text="${data}"></td>
+                <td th:each="data : ${field}" th:text="${data.key} + ': ' + ${data.value}"></td>
             </tr>
         </table>
     </div>
